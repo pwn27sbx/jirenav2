@@ -1,0 +1,149 @@
+---
+
+---
+
+<section
+  id="servicios"
+  class="w-full h-[80vh] flex flex-col md:flex-row items-center justify-center p-20 bg-white/20 backdrop-blur-xl text-white relative select-none overflow-x-visible"
+>
+  <div class="grid grid-cols-5 grid-rows-4 gap-4">
+    <div class="row-span-4">
+      <h1
+        class="text-6xl font-bold text-slate-800 text-left ml-8 flex items-center h-full"
+      >
+        Te ofrecemos...
+      </h1>
+    </div>
+    <div class="col-span-4 row-span-4 -mr-48">
+      <div
+        class="flex flex-col md:flex-row items-center relative translate-x-32"
+      >
+        <div
+          class="w-[360px] h-[550px] p-6 relative overflow-hidden group flex flex-col justify-center items-center section glass-effect card transform"
+          data-hover="El mango es muy rico"
+        >
+          <div class="light-effect absolute inset-0 pointer-events-none"></div>
+          <h2
+            class="text-3xl font-bold mb-3 text-slate-700 relative text-center z-10 section-title"
+          >
+            Transporte de carga y mercancia
+          </h2>
+          <p
+            class="text-lg text-slate-700 relative text-center z-10 section-text"
+          >
+            Carga Ligera, Pesada y Sobre-dimensionada
+          </p>
+        </div>
+        <div
+          class="w-[360px] h-[550px] p-6 relative overflow-hidden group flex flex-col justify-center items-center section glass-effect card transform"
+          data-hover="El mango es muy rico"
+        >
+          <div class="light-effect absolute inset-0 pointer-events-none"></div>
+          <h2
+            class="text-3xl font-bold mb-3 text-slate-700 relative text-center z-10 section-title"
+          >
+            Servicios express
+          </h2>
+          <p
+            class="text-lg text-slate-700 relative text-center z-10 section-text"
+          >
+            Envío y entrega de sobres, documentos, paquetes en Arequipa, Lima,
+            Moquegua y Cusco
+          </p>
+        </div>
+        <div
+          class="w-[360px] h-[550px] p-6 relative overflow-hidden group flex flex-col justify-center items-center section glass-effect card transform"
+          data-hover="El mango es muy rico"
+        >
+          <div class="light-effect absolute inset-0 pointer-events-none"></div>
+          <h2
+            class="text-3xl font-bold mb-3 text-slate-700 relative text-center z-10 section-title"
+          >
+            Alquiler de almacenes y montacargas
+          </h2>
+          <p
+            class="text-lg text-slate-700 relative text-center z-10 section-text"
+          >
+            Tenemos moderna infraestructura
+          </p>
+        </div>
+        <div
+          class="w-[360px] h-[550px] p-6 relative overflow-hidden group flex flex-col justify-center items-center section glass-effect card transform"
+          data-hover="El mango es muy rico"
+        >
+          <div class="light-effect absolute inset-0 pointer-events-none"></div>
+          <h2
+            class="text-3xl font-bold mb-3 text-slate-700 relative text-center z-10 section-title"
+          >
+            Mucho mas
+          </h2>
+        </div>
+      </div>
+      <div id="glow"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .glass-effect {
+    background: rgba(125, 125, 125, 0.1);
+    border: 1px solid rgba(135, 135, 135, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: skew(-12deg);
+  }
+
+  .glass-effect:hover {
+    border-color: rgba(200, 200, 200, 0.27);
+    transform: scale(1.1) skew(-12deg);
+    z-index: 20;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  #glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(214, 177, 12, 0.14) 0%,
+      rgba(0, 255, 0, 0) 70%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: none;
+  }
+
+  #servicios {
+    position: relative;
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  const cardsElement = document.getElementById("servicios");
+
+  if (cardsElement) {
+    cardsElement.addEventListener("mousemove", (event) => {
+      const glow = document.getElementById("glow");
+      if (glow) {
+        glow.style.display = "block";
+        glow.style.left = `${event.clientX - (event.currentTarget as HTMLElement).getBoundingClientRect().left}px`;
+        glow.style.top = `${event.clientY - (event.currentTarget as HTMLElement).getBoundingClientRect().top}px`;
+      }
+    });
+  }
+
+  if (cardsElement) {
+    cardsElement.addEventListener("mouseleave", () => {
+      const glow = document.getElementById("glow");
+      if (glow) {
+        glow.style.display = "none";
+      }
+    });
+  }
+</script>
