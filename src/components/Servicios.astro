@@ -100,6 +100,7 @@
     transition: all 0.3s ease;
     @media (min-width: 768px) {
       transform: skew(-12deg);
+      -webkit-transform: skew(-12deg); /* Soporte para Safari */
     }
   }
 
@@ -109,9 +110,11 @@
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
     @media (min-width: 768px) {
       transform: scale(1.1) skew(-12deg);
+      -webkit-transform: scale(1.1) skew(-12deg); /* Soporte para Safari */
     }
     @media (max-width: 767px) {
       transform: scale(1.05);
+      -webkit-transform: scale(1.05); /* Soporte para Safari */
     }
   }
 
@@ -127,6 +130,7 @@
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); /* Soporte para Safari */
     z-index: 5;
     display: none;
   }
