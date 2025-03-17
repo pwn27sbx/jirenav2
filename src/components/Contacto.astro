@@ -1,0 +1,58 @@
+---
+import { useState } from 'react';
+---
+
+<section class="bg-gray-100 py-12">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Contáctanos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <div>
+        <form action="#" method="POST" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+            <input type="text" name="name" id="name" required class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+            <input type="email" name="email" id="email" required class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700">Asunto</label>
+            <input type="text" name="subject" id="subject" required class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+            <textarea name="message" id="message" rows="4" required class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
+          </div>
+          <div>
+            <button type="submit" class="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Enviar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-lg font-medium text-gray-900">Dirección</h3>
+          <p class="text-sm text-gray-700">Calle Islay s/n Los Tunales, Tiabaya, Arequipa</p>
+          <p class="text-sm text-gray-700">Av. Rimac 477, Callao, Callao</p>
+          <p class="text-sm text-gray-700">Av. Evitamiento Osccollopampa, San Jerónimo, Cusco</p>
+          <p class="text-sm text-gray-700">Quebrada San Antonio s/n Mariscal Nieto, Moquegua</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-medium text-gray-900">Teléfono</h3>
+          <p class="text-sm text-gray-700">+51 959 920 668</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-medium text-gray-900">Correo Electrónico</h3>
+          <p class="text-sm text-gray-700">contacto@empresa.com</p>
+        </div>
+        <!-- Mapa de Ubicación -->
+        <div>
+          <h3 class="text-lg font-medium text-gray-900">Ubicación</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15306.77365077146!2d-71.61084!3d-16.44039!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91423524893318eb%3A0x4a476ab4a18e33e1!2sTransportes%20Jirena%20sac!5e0!3m2!1ses!2spe!4v1742176076446!5m2!1ses!2spe" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
