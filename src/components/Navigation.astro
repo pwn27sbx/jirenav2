@@ -2,7 +2,9 @@
 
 ---
 
-<header class="fixed w-full z-50 bg-white/80 backdrop-blur-xl select-none transition-transform duration-300">
+<header
+  class="fixed w-full z-50 bg-white/80 backdrop-blur-xl select-none transition-transform duration-300"
+>
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
@@ -92,7 +94,7 @@
   header {
     transform: translateY(0);
   }
-  
+
   header.nav-hidden {
     transform: translateY(-100%);
   }
@@ -100,24 +102,24 @@
 
 <script>
   let lastScrollY = window.scrollY;
-  const header = document.querySelector('header');
-  
+  const header = document.querySelector("header");
+
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
-    
+
     // Only trigger after scrolling 5px to avoid micro-movements
     if (Math.abs(currentScrollY - lastScrollY) < 5) return;
-    
+
     if (currentScrollY > lastScrollY) {
       // Scrolling down
-      header?.classList.add('nav-hidden');
+      header?.classList.add("nav-hidden");
     } else {
       // Scrolling up
-      header?.classList.remove('nav-hidden');
+      header?.classList.remove("nav-hidden");
     }
-    
+
     lastScrollY = currentScrollY;
   };
-  
-  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
 </script>
