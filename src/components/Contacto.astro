@@ -50,9 +50,27 @@ import { useState } from 'react';
         <!-- Mapa de Ubicación -->
         <div>
           <h3 class="text-lg font-medium text-gray-900">Ubicación</h3>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15306.77365077146!2d-71.61084!3d-16.44039!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91423524893318eb%3A0x4a476ab4a18e33e1!2sTransportes%20Jirena%20sac!5e0!3m2!1ses!2spe!4v1742176076446!5m2!1ses!2spe" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <style>
+            .map-container {
+              position: relative;
+              overflow: hidden;
+              width: 100%;
+              padding-top: 56.25%; /* Proporción 16:9 */
+            }
+            .map-container iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border: 0;
+            }
+          </style>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15306.77365077146!2d-71.61084!3d-16.44039!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91423524893318eb%3A0x4a476ab4a18e33e1!2sTransportes%20Jirena%20sac!5e0!3m2!1ses!2spe!4v1742176076446!5m2!1ses!2spe" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
